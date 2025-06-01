@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTVN</title>
+</head>
+<body>
+    <h1 id="tieuDe">Chào mừng bạn đến với trang web</h1>
+
+  <img id="hinhAnh" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Shopee-logo.jpg" alt="Ảnh demo" width="200">
+
+  <p>
+    Truy cập trang: 
+    <a id="linkWeb" href="https://shopee.vn/m/6-6?gad_source=1&gad_campaignid=22403716237&gbraid=0AAAAADPpQE4ql6HH7zbSYw0yCsqOudEl1&gclid=Cj0KCQjw0erBBhDTARIsAKO8iqQQO78ZlvLN3h7mrAArk-9577kEYyF5vtAuJ1bL6WPLj3UXzyrJR0caAuleEALw_wcB" target="_blank">Link gốc</a>
+  </p>
+    <h2>Nhập đường dẫn ảnh và hiển thị</h2>
+    <input type="text" id="imagePath" placeholder="Nhập đường dẫn ảnh">
+    <button onclick="showImage()">Hiển thị ảnh</button>
+    <br><br>
+    <img id="displayedImage" src=" " alt="Ảnh sẽ hiển thị ở đây" style="max-width: 500px; max-height: 500px;">
+
+
+   
+    <script src="index.js">
+
+
+ document.getElementById("tieuDe").innerText = "Xin chào từ JavaScript!";
+
+    // Cập nhật link cho thẻ a
+    const link = document.getElementById("linkWeb");
+    link.href = "https://shopee.vn";             
+    link.innerText = "Mua sắm tại Shopee"; 
+
+function showImage()
+{ 
+    const path = document.getElementById("imagePath").value;
+    const img = document.getElementById("displayedImage");
+    img.src = path;     
+
+}
+    </script>
+</body>
+</html>
